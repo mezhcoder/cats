@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CATS version="1.11">
+<Problem title="Шоколадные цифры" lang="ru" tlimit="1" mlimit="512M"
+  author="Н. Жиденко" inputFile="*STDIN" outputFile="*STDOUT"
+  saveInputPrefix="50B" saveOutputPrefix="50B" saveAnswerPrefix="50B">
+
+<Picture name="box" src="chocolateBox.png"/>
+
+<ProblemStatement>
+<p>Ребёнок Доби очень любит <b>математику и подарки</b><br></br>
+ Как-то раз ему сделали необычный подарок, расставили в ряд коробочки в которых хранятся шоколадные цифры.<br></br>
+Доби сказали, что коробки расставлены так, что шоколадные цифры идут <b>от убывания к возрастанию.</b> И у каждой коробки есть свой <b>порядковый номер.</b> Первая коробка с порядковым номером начинается с <b>0</b> до <b>N</b>, где <b>N</b> - количество <b>коробок</b> в которых хранятся шоколадные цифры <br></br>У Доби есть любимое шоколадное число и он хочет <b>найти его.</b> Но, коробок много и он не хочет <b>перебирать все подряд.</b><br></br>
+Он подошёл к коробке которая стоит в середине ряда, открыл её, достал шоколадное число, посмотрел на него хорошенько. И ему<br></br> пришла идея, как можно быстро найти его шоколадное число <b>за минимальное количество попыток.</b><br></br>
+Помогите <b>определить</b> Доби есть ли его любимое шоколадное число в коробках.</p>
+<img picture="box" align="center"/>
+</ProblemStatement>
+
+<InputFormat>
+  <p>Входные данные содержит три строки:<br></br>
+  	в первой количество коробок<br></br>
+  	во второй шо
+
+  	$N$,
+  </p>
+</InputFormat>
+
+<OutputFormat>
+  <p>Выходные данные должны содержать
+  </p>
+</OutputFormat>
+
+<ProblemConstraints>
+  <p>$1 \le N \le 2^{31}-1$
+  </p>
+</ProblemConstraints>
+
+<Sample rank="1">
+<SampleIn src="tests/01.in"/><SampleOut src="tests/01.out"/>
+</Sample>
+<Sample rank="2">
+<SampleIn src="tests/02.in"/><SampleOut src="tests/02.out"/>
+</Sample>
+<Sample rank="3">
+<SampleIn src="tests/03.in"/><SampleOut src="tests/03.out"/>
+</Sample>
+
+<Solution name="sol" src="sol_ask.py"/>
+<Import type="checker" guid="std.strs"/>
+<Generator name="gen" src="generate_tests.py"/>
+
+<Test rank="1-5"><In src="tests/%0n.in"/><Out use="sol"/></Test>
+<Testset name="official" tests="1-5"/>
+
+
+
+</Problem>
+</CATS>
